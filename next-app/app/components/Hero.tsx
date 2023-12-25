@@ -24,8 +24,14 @@ const Hero = () => {
             <Button buttonText="Get Started" />
           </div>
         </div>
-
-        <div className="bg-gray-900 h-screen"></div>
+        {/* Hero side Image not displaying, Have to fix this */}
+        <div
+          style={{
+            backgroundImage: "url(img/hero-img.jpg)",
+            backgroundPositionX: "-3.05em",
+          }}
+          className="min-h-screen w-full bg-no-repeat bg-auto bg-local"
+        ></div>
       </section>
     </>
   );
