@@ -28,7 +28,7 @@ const Hero = () => {
         <div
           style={{
             backgroundImage: "url(img/hero-img.jpg)",
-            backgroundPositionX: "-3.05em",
+            backgroundPositionX: "-3.5em",
           }}
           className="min-h-screen w-full bg-no-repeat bg-auto bg-local"
         ></div>
