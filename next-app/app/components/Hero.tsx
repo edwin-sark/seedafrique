@@ -1,37 +1,31 @@
 import React from "react";
 import NavBar from "./NavBar";
+import "../css/style.css";
+import Button from "./Button";
 
-const Hero = () => {
+interface Props {
+  h1: string;
+  p: string;
+}
+
+const Hero = ({ h1, p }: Props) => {
   return (
     <>
-      <NavBar />
-      <section className="flex flex-row justify-between h-screen">
-        <div
-          id="hero-content"
-          className="flex flex-col justify-start max-w-2xl m-7"
-        >
-          <img
-            style={{ width: "10em", height: "5em" }}
-            className="mb-16 mt-20"
-            src="img/seedlogo.png"
-            alt="SEEDAfrique Logo"
-          />
-          <h1 className="text-5xl mb-6">
-            Connecting People with Opportunities
-          </h1>
-          <p className="text-xl">
-            Discover limitless opportunities. Embrace innovation and change the
-            world.
-          </p>
+      <div className="hero-section">
+        <div className="hero-content text-lime-100">
+          <NavBar />
+          <div className="flex flex-col items-center justify-center h-screen ">
+            <div className="w-3/5 text-center">
+              <h1 className="text-5xl mb-6 ">{h1}</h1>
+              <p className="text-xl">{p}</p>
+            </div>
+            <span className="flex space-x-20 mt-12">
+              <Button buttonText="Learn More" />
+              <Button buttonText="Get Started"></Button>
+            </span>
+          </div>
         </div>
-        <div
-          style={{
-            backgroundImage: "url(img/hero-img.jpg)",
-            backgroundPositionX: "-3.5em",
-          }}
-          className="min-h-screen w-full bg-no-repeat bg-auto bg-local"
-        ></div>
-      </section>
+      </div>
     </>
   );
 };
